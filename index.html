@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планеты</title>
+    <style>
+body{
+    background-color: black;
+    margin: 0;
+    color: gray;
+    font-size: 30px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sun{
+    background-image: url(https://labor6.files.wordpress.com/2017/03/solnce_zvezdy_kosmos_svet_58237_1920x1180.jpg);
+}
+.mercuru{
+    background-image: url(https://sites.google.com/site/kosmosdlavseh666/_/rsrc/1453895516365/cto-takoe-solnecnaa-sistema/merkurij/4.jpg);
+}
+.venera{
+    background-image: url(https://cdn.intesense.ru/wp-content/uploads/2019/07/2019-07-15_15-11-50_143878.jpg);
+}
+.earth{ 
+    background-image:url(https://in-space.ru/wp-content/uploads/2019/01/earth_soc-1024x576.jpg);
+}
+.mars{
+    background-image: url(https://poisknews.ru/wp-content/uploads/2020/02/5377829-1020x500.jpg);
+}
+.yup{
+    background-image: url(https://thespaceway.info/wp-content/uploads/2020/09/beautiful-jupiter-cosmos-digital-art-red-planet-stars_2560x1600-1024x640.jpg);
+}
+ul{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+    </style>
+</head>
+
+<body class="sun">
+
+    <button id="Bsun"> Солнце </button>
+    <button id="Bmercuru">Меркурий</button>
+    <button id="BVenera">Венера</button>
+    <button id="Bearth">Земля</button>    
+    <button id="Bmars">Марс</button>
+    <Button id="Byup">Юпитер</Button>
+    
+
+    <h2 id="name">Солнце</h2>
+
+    <ul>
+        <li id="size"> Размер:</li>
+        <li id="weight">Масса:</li>
+        <li id="temp">Температура:</li>
+        <li id="day">День:</li>
+
+    </ul>
+<script>
+let mercuru = {
+name: 'Меркурий',
+size:'2 439,7 км',
+weight: '3,285E23 кг',
+temp:'349,9 C',
+day:'58 дн 15 ч 30 мин',
+class:'mercuru'
+
+}
+//console.log(mercuru.name)
+document.getElementById('Bmercuru').addEventListener('click',function(){ 
+onPlanet(mercuru);
+
+})
+function onPlanet(planet){
+document.getElementById('name').innerText = planet.name
+document.getElementsByTagName('body')[0].className = planet.class
+document.getElementById('size').innerText = planet.size
+document.getElementById('weight').innerText = planet.weight
+document.getElementById('temp').innerText = planet.temp
+document.getElementById('day').innerText = planet.day
+}
+let venera={
+name:'Венера',
+size:'6 051,8 км',
+weight:'4,867E24 кг',
+temp:'462 °C)',
+day:'116 д 18 ч 0 мин',
+class:'venera'
+}
+document.getElementById('BVenera').addEventListener('click',function(){
+    onPlanet(venera);
+})
+
+    let mars={
+        name:'Марс',
+        size:'3 389,5 км',
+        weight:'6,39E23 кг',
+        temp:'+35 °C',
+        day:'24',
+        class:'mars'
+    }
+    document.getElementById('Bmars').addEventListener('click',function(){
+    onPlanet(mars);
+})
+let sun={
+        name:'Солнце',
+        size:'1 392 700 км',
+        weight:'1,989E30 кг',
+        temp:'5 778 К',
+        day:'24',
+        class:'sun'
+    }
+    document.getElementById('Bsun').addEventListener('click',function(){
+    onPlanet(sun);
+})
+let earth={
+        name:'Земля',
+        size:'6 371 км',
+        weight:'5,972E24 кг',
+        temp:'−89,2 °C 14 °C 56,7 °C',
+        day:'365',
+        class:'earth'
+    }
+    document.getElementById('Bearth').addEventListener('click',function(){
+    onPlanet(earth);
+})
+let yup={
+        name:'Юпитер',
+        size:'69 911 км',
+        weight:'1,898E27 кг',
+        temp:'-145°C.',
+        day:'',
+        class:'yup'
+    }
+    document.getElementById('Byup').addEventListener('click',function(){
+    onPlanet(yup);
+})
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
